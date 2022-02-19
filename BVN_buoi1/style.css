@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+}
+
+#app{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    border-radius: 20px;
+}
+.home{
+    width: 400px;
+    height: 60vh;
+    background-color: #F2F4F9;
+    padding: 10px ;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.home_btnCreate{
+    height: 7%;
+    width: 50%;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 15px;
+    background-color: #3269D9;
+    color: #F2F4F9;
+    font-weight: bolder;
+    border: 0px ;
+
+}
+
+.taskItem-ctn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 10%;
+    background-color: #FFFFFF;
+    margin: 10px auto;
+    padding: 10px 10px;
+    border-radius: 15px;
+}
+
+.taskItem-color{
+    height: 90%;
+    width: 2%;
+    background-color: aqua;
+    border-radius: 5px;
+}
+
+.taskItem-content{
+    width: 80%;
+    text-align: left;
+}
+
+.taskItem-content h3{
+    margin: 0px;
+}
+
+.taskItem-content p{
+    color: #999999;
+    margin: 0px;
+}
+
+.taskItem-tick{
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid aqua;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.modal_create_task{
+    transition: 0.5s;
+}
+
+.modal_create_task{
+    z-index: 1000;
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #99999979;
+}
+
+.modal_create_task form{
+    background-color: #F2F4F9;
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.modal_create_task form input{
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #7399fc;
+    padding: 5px;
+}
+
+.modal_create_task button{
+    background-color: #3269D9;
+    border: 0px;
+    margin-bottom: 5px;
+    padding: 7px;
+    border-radius: 5px;
+    color: #F2F4F9;
+    cursor: pointer;
+}
+
+.tasl_list{
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
