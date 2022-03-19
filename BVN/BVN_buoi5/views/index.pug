@@ -1,0 +1,61 @@
+mixin item(nameItem, src, price)
+  .item 
+    img(src=src).imgSrc
+    h1(class="item_name")= nameItem
+    h2(class="item_price")= price
+    form
+      .form-group 
+        label(for="Size") Size 
+        select.form-control(name="size")
+          option(value="tall") Tall
+          option(value="grander") Grander
+          option(value="venti") Venti 
+      .form-group 
+        label(for="ice") Ice 
+        select.form-control(name="ice")
+          option(value="100%") 100%
+          option(value="75%") 75%
+          option(value="50%") 50%
+      .form-group 
+        label(for="Suger") Suger  
+        select.form-control(name="suger")
+          option(value="100%") 100%
+          option(value="75%") 75%
+          option(value="50%") 50%
+      button.btn.btn-block.btn-success(type="click") ADD TO BASKET
+
+
+html 
+head 
+  title Trang chủ
+  meta(http-equiv="Content-Type", content="text/html;charset=UTF-8")
+  link(rel="stylesheet", href='/stylesheets/homePage.css')
+  link(rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css")
+body  
+  .container
+    .header(style = "height = 20vh; width = 100%;")
+      img.logo(src="/images/logo.png", alt="")
+      .title_bar 
+        a(href="#") COFFE 
+        a(href="#") TEA 
+        a(href="#") MENU 
+      input.search(type="text", placeholder="SEARCH")
+      .uil-shopping-cart
+      form(action="/check_out", method="post", enctype="application/x-www-form-urlencoded").cart 
+        h3 Danh sach Item
+        .total 
+          .moneyTotal 
+            p Total: 
+            h2.cartTotal 
+          .checkout   
+            button.btn_checkout(type="submit") CHECK OUT
+
+    .body
+      +item('Midnight Mint', '/images/Midnight Mint.png', '$9.75')
+      +item('Mocha Frappuccino', '/images/Mocha Frappuccino.png', '$10.5')
+      +item('Mocha', '/images/Mocha.png', '$7.75')
+      +item('Pink Drink', '/images/Pink Drink.png', '$8.15')
+      
+  script(src="/javascripts/mind.js") 
+      
+        

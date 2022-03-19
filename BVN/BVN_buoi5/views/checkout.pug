@@ -1,0 +1,22 @@
+html 
+head 
+  title Trang chủ
+  meta(http-equiv="Content-Type", content="text/html;charset=UTF-8")
+  link(rel="stylesheet", href='/stylesheets/homePage.css')
+  link(rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css")
+body 
+  .cartCheckOut   
+      - var array  = body.name 
+      for n, i in array 
+        .ItemCheckOut
+          img(src= body.imgSrc[i] , alt="")
+          .titleName #{body.name[i]}
+          .option #{body.option[i]}
+          .quantity #{body.quantity[i]}
+          .price #{body.price[i]}
+      .total 
+        p Total 
+        h3 #{body.total} 
+
+  
+  script(src="/javascripts/checkout.js") 
