@@ -6,7 +6,7 @@ head
   link(rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css")
 body 
   .cartCheckOut   
-      - var array  = body.name 
+      - var array= body.name 
       for n, i in array 
         .ItemCheckOut
           img(src= body.imgSrc[i] , alt="")
@@ -17,6 +17,4 @@ body
       .total 
         p Total 
         h3 #{body.total} 
-
-  
-  script(src="/javascripts/checkout.js") 
+  script(src="/javascripts/checkout.js")

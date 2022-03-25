@@ -21,7 +21,7 @@ let data2 = fs.readFileSync('second.txt');
 console.log('Phương thức đọc file đỒng bộ: '+ data1.toString());
 console.log('Phương thức đọc file đỒng bộ: '+ data2.toString());
 
-fs.writeFile('./finish-sync.txt', data1 + data2, function(err,data) {
+fs.writeFile('./finish-sync.txt', data1 +' '+ data2, function(err,data) {
     if(err) throw err;
     console.log('write file successfully')
 })

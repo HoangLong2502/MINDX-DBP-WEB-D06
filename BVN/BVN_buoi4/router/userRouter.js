@@ -47,13 +47,13 @@ userRouter.post(
     // password must be at least 5 chars long
     body('name').isLength({ min: 5 }),
     body('gender').custom((value, {req}) => {
-        if(value == 0) {
+        if (value == 0) {
             return value = "Nam"
         };
-        if(value == 1) {
+        if (value == 1) {
             return value = "Nu"
         };
-        if(value == 2) {
+        if (value == 2) {
             return value = "khong xac dinh"
         }
         else {
@@ -93,13 +93,13 @@ userRouter.put('/put/:id',
     // password must be at least 5 chars long
     body('name').isLength({ min: 5 }),
     body('gender').custom((value, {req}) => {
-        if(value == 0) {
+        if (value == 0) {
             return value = "Nam"
         };
-        if(value == 1) {
+        if (value == 1) {
             return value = "Nu"
         };
-        if(value == 2) {
+        if (value == 2) {
             return value = "khong xac dinh"
         }
         else {
