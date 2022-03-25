@@ -1,0 +1,23 @@
+html 
+head 
+  title Title 
+  meta(http-equiv="Content-Type", content="text/html;charset=UTF-8")
+  link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css")
+body 
+  div.container
+    .card(style = "margin-top: 5%;")
+      h3.card-header Xử lý Form 
+      .card-body 
+        form(action="/user-info", method="post", enctype="application/x-www-form-urlencoded")
+          .form-group 
+            label(for="name") Họ và tên 
+            input.form-control(type="text", name="name", placeholder="Nguyen van A", required)
+          .form-group 
+            label(for="age") Tuổi
+            input.form-control(type="number", name="age", placeholder="29", required)
+          .form-group 
+            label(for="gender") Giới tính 
+            select.form-control(name="gender", required)
+              option(value="Nam") Nam 
+              option(value="Nu") Nu 
+          button.btn.btn-block.btn-success(type="submit") Gửi   
